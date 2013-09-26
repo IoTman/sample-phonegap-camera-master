@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PhoneGap Camera API Sample</title>
+        <title>Exemplo da API PhoneGap Camera</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1"> 
         <meta name="Copyright" content="&copy; 2012, Intel Corporation" />
         <!--
@@ -23,29 +23,29 @@
     <body onload="onLoad()">
 		
         <!-- Home Page (menu page) -->
-        <div data-role="page" id="home_page" data-theme="a">
+        <div data-role="page" id="home_page" data-theme="b">
             <div data-role="header">
-                <h3>PhoneGap Camera API Sample</h3>
-                <a href="#settings_page" data-role="button" id="settings_button" data-theme="b" data-mini="true" class="ui-btn-right">Settings</a>
+                <h3>Exemplo da API PhoneGap Camera</h3>
+                <a href="#settings_page" data-role="button" id="settings_button" data-theme="b" data-mini="true" class="ui-btn-right">Configurações</a>
             </div>
             <div data-role="content">
-                <a href="#" data-role="button" id="open_camera_button">Capture a photo with camera</a>
-                <a href="#" data-role="button" id="open_lib_button">Open Photo Library</a>
-                <a href="#" data-role="button" id="open_alb_button">Open saved photo album</a>
+                <a href="#" data-role="button" id="open_camera_button">Usar foto da câmera</a>
+                <a href="#" data-role="button" id="open_lib_button">Abrir foto da biblioteca</a>
+                <!-- a href="#" data-role="button" id="open_alb_button">Open saved photo album</a -->
                 
                 <div id="settings_info" class="ui-body ui-body-b info"></div>
             </div>
             <div data-role="footer" class="stickbottom">
-                <div><a rel="LICENSE" href="http://software.intel.com/html5/license/samples" target="_blank">License Terms and Conditions</a></div>
+                <div><!-- a rel="LICENSE" href="http://software.intel.com/html5/license/samples" target="_blank">License Terms and Conditions</a --> </div>
             </div>
         </div>
         
         <!-- Settings edit page -->
-        <div data-role="page" id="settings_page" data-theme="a">
+        <div data-role="page" id="settings_page" data-theme="b">
             <div data-role="header">
-                <a href="#home_page" id="settings_cancel_button" data-role="button" data-mini="true" class="ui-btn-left">Cancel</a>
-                <h3>Picture Settings</h3>
-                <a href="#home_page" id="settings_ok_button" data-role="button" data-theme="b" data-mini="true" class="ui-btn-right">Save</a>
+                <a href="#home_page" id="settings_cancel_button" data-role="button" data-mini="true" class="ui-btn-left">Cancelar</a>
+                <h3>Configurações da Imagem</h3>
+                <a href="#home_page" id="settings_ok_button" data-role="button" data-theme="b" data-mini="true" class="ui-btn-right">Salvar</a>
             </div>
             
             <div data-role="content">
@@ -55,50 +55,50 @@
                     <div data-role="collapsible-set" data-inset="false" data-mini="true">
 
                         <div data-role="collapsible" data-collapsed="false">
-                            <h3>Picture editing settings</h3>
+                            <h3>Configurações de edição</h3>
                         	
-                            <label for="quality_input" data-mini="true">Picture quality:</label>
+                            <label for="quality_input" data-mini="true">Qualidade da imagem capturada:</label>
                             <input id="quality_input" name="quality_input" type="range" min="0" max="100" step="5" value="40" data-mini="true"/>
                             
-                            <label for="width_input" data-mini="true">Target width:</label>
+                            <label for="width_input" data-mini="true">Largura:</label>
                             <input id="width_input" name="width_input" type="range" min="50" max="1500" step="25" value="500" data-mini="true"/>
                             
-                            <label for="height_input" data-mini="true">Target height:</label>
+                            <label for="height_input" data-mini="true">Altura:</label>
                             <input id="height_input" name="height_input" type="range" min="50" max="1500" step="25" value="500" data-mini="true"/>
                             
-                            <p><label data-mini="true">Picture editing:</label></p>
+                            <p><label data-mini="true">Edição:</label></p>
                             <div data-role="controlgroup">
-                                <label for="edit_input" data-mini="true">Allow result zoom and crop</label>
+                                <label for="edit_input" data-mini="true">Permitir zoom e corte</label>
                                 <input id="edit_input" name="edit_input" type="checkbox" checked data-mini="true">
                                 
-                                <label for="orient_input" data-mini="true">Allow orientation correction</label>
+                                <label for="orient_input" data-mini="true">Permitir correção da orientação</label>
                                 <input id="orient_input" name="orient_input" type="checkbox" checked data-mini="true">
                             </div>
                     	</div>
                     	
                     	<div data-role="collapsible">
-                            <h3>Picture saving options</h3>
+                            <h3>Opções ao salvar imagem</h3>
                         	
-                            <label for="encod_input" data-mini="true">Choose encoding type:</label>
+                            <label for="encod_input" data-mini="true">Tipo de codificação:</label>
                             <select id="encod_input" name="encod_input" data-mini="true">
                               <option value="0" selected="selected">JPEG</option>
                               <option value="1">PNG</option>
                             </select>
                                   
-                            <label for="save_input" data-mini="true">Save picture to photo album</label>
-                            <select name="save_input" id="save_input" data-role="slider" data-mini="true" data-theme="a" data-track-theme="a">
-                                <option value="false">No</option>
-                            	<option value="true" selected="selected">Yes</option>
+                            <label for="save_input" data-mini="true">SalvaSave picture to  imagem no album</label>
+                            <select name="save_input" id="save_input" data-role="slider" data-mini="true" data-theme="b" data-track-theme="b">
+                                <option value="false">Não</option>
+                            	<option value="true" selected="selected">Sim</option>
                             </select>
                     	</div>
                         
                         <div data-role="collapsible">
-                            <h3>Picture opening options</h3>
-                            <label for="media_input" data-mini="true">Choose media type:</label>
+                            <h3>Opções de abertura</h3>
+                            <label for="media_input" data-mini="true">Escolher tipo:</label>
                             <select id="media_input" name="media_input" data-mini="true">
-                              <option value="0" selected="selected">Pictures</option>
+                              <option value="0" selected="selected">Imagens</option>
                               <option value="1">Videos</option>
-                              <option value="2">All media</option>
+                              <option value="2">Todos</option>
                             </select>
                         </div>
                     </div>
@@ -107,13 +107,13 @@
         </div>
         
         <!-- Camera capture result page -->
-        <div data-role="page" id="result_page" data-theme="a">
+        <div data-role="page" id="result_page" data-theme="b">
             <div data-role="header">
-                <h3>Result</h3>
-                <a href="#home_page" id="home_button" data-role="button" data-theme="b" data-mini="true" class="ui-btn-right">Back to menu</a>
+                <h3>Resultado</h3>
+                <a href="#home_page" id="home_button" data-role="button" data-theme="b" data-mini="true" class="ui-btn-right">Voltar</a>
             </div>
             <div data-role="content">
-                <h3>Result picture:</h3>
+                <h3>Imagem resultado:</h3>
                 <img id="pic" src="" style="display: none; border: 2px black;"/>
             </div>
         </div>
