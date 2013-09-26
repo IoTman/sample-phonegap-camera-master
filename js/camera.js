@@ -241,19 +241,19 @@ function fillSettingsInfo(infoDivName) {
     }
     
     if (settingsInfo != null) {
-        settingsInfo.innerHTML += "<h3>Settings: </h3>" +
+        settingsInfo.innerHTML += "<h3>Configurações: </h3>" +
                                  "<table>" +
-                                 "<tr><td class='bh'>Editing options: </td></tr>" + 
-                                 "<tr><td class='bi'>Quality:</td><td>" + settings.quality + " of 100</td></tr>" +
-                                 "<tr><td class='bi'>Target picture width:</td><td>" + settings.targetWidth + " px</td></tr>" +
-                                 "<tr><td class='bi'>Target picture height:</td><td>" + settings.targetHeight + " px</td></tr>" +
-                                 "<tr><td class='bi'>Allow picture zoom and crop:</td><td>" + ((settings.allowEdit == true) ? "Yes" : "No") + "</td></tr>" + 
-                                 "<tr><td class='bi'>Correct orientation:</td><td>" + ((settings.correctOrientation == true) ? "Yes" : "No") + "</td></tr>" +
-                                 "<tr><td class='bh'>Saving options: </td></tr>" + 
-                                 "<tr><td class='bi'>Target encoding type:</td><td>" + settingsBatch.elements["encod_input"].options[settings.encodingType].innerHTML + "</td></tr>" +
-                                 "<tr><td class='bi'>Save to Photo Album:</td><td>" + ((settings.saveToPhotoAlbum == true) ? "Yes" : "No") + "</td></tr>" +
-                                 "<tr><td class='bh'>Opening options: </td></tr>" + 
-                                 "<tr><td class='bi'>Browse on open:</td><td>" + settingsBatch.elements["media_input"].options[settings.mediaType].innerHTML + "</td></tr>" +
+                                 "<tr><td class='bh'>Opções de edição: </td></tr>" + 
+                                 "<tr><td class='bi'>Qualidade:</td><td>" + settings.quality + " de 100</td></tr>" +
+                                 "<tr><td class='bi'>Largura:</td><td>" + settings.targetWidth + " px</td></tr>" +
+                                 "<tr><td class='bi'>Altura:</td><td>" + settings.targetHeight + " px</td></tr>" +
+                                 "<tr><td class='bi'>Permitir zoom e corte:</td><td>" + ((settings.allowEdit == true) ? "Sim" : "Não") + "</td></tr>" + 
+                                 "<tr><td class='bi'>Corrigir orientação:</td><td>" + ((settings.correctOrientation == true) ? "Sim" : "Não") + "</td></tr>" +
+                                 "<tr><td class='bh'>Opções ao salvar: </td></tr>" + 
+                                 "<tr><td class='bi'>Codificação:</td><td>" + settingsBatch.elements["encod_input"].options[settings.encodingType].innerHTML + "</td></tr>" +
+                                 "<tr><td class='bi'>Salvar para o album:</td><td>" + ((settings.saveToPhotoAlbum == true) ? "Yes" : "No") + "</td></tr>" +
+                                 "<tr><td class='bh'>Opções de abertura: </td></tr>" + 
+                                 "<tr><td class='bi'>Buscar para abrir:</td><td>" + settingsBatch.elements["media_input"].options[settings.mediaType].innerHTML + "</td></tr>" +
                                  "</table>";
     }
 }
